@@ -92,6 +92,13 @@ As our project grows, we’ve planned to:
 We’re a team of superheroes 💥, each contributing our superpower to build an amazing system. Let's keep it simple, make it fun, and transform code into solutions together. Each sprint will help us make progress, and we’ll have constant feedback loops to ensure we’re building the right system. 🎉💻
 
 ---
+### 🚀 Desiglne! 🚀
+
+here is the figma link to the project 
+
+https://www.figma.com/design/TF1pxB9MBJKCvLyV1rp6N0/SCHOOL-MANAGEMENT-SYSTEM-(Community)?node-id=9-0&node-type=canvas&t=9Miwfn0lIPj6TSOJ-0
+
+---
 
 ### 🗣 Contact Information 🗣
 - **Address:** Ange Raphael, Douala, Cameroon  
@@ -101,3 +108,4 @@ We’re a team of superheroes 💥, each contributing our superpower to build an
 ---
 
 Ready to create something amazing with our Agile superpowers? Let's do this! 🌟
+ 

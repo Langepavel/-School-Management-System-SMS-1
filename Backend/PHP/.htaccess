@@ -1,0 +1,5 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Handle requests with /api endpoint and send them to index.php
+RewriteRule ^api/(.*)$ api/index.php [QSA,L]
