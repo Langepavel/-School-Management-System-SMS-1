@@ -3,40 +3,54 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
+// Database connection details
+$servername = "localhost";  // MySQL username
+$username = "root";         // MySQL username
+$password = "";             // MySQL password (empty if none)
+$dbname = "team1";          // Database name
+
+// Create database connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Handle the request method (GET, POST, etc.)
 $request_method = $_SERVER['REQUEST_METHOD'];
 
-// The sample data (you can replace this with a database or other logic)
-$sample_data = [
-    'status' => 'success',
-    'message' => 'Welcome to our API!',
-    'data' => 'sample_data',
+// // Data to be returned (this can be replaced with actual data from a database)
+
+// $sample_data = [
+//     'status' => 'success',
+//     'message' => 'Welcome to the User API!',
+//     'data' => 'sample_user_data',
+// ];
+
+// Routes array
+$routes = [
+    '/user' => 'User.php',       // Route to User.php
+    '/product' => 'Product.php', // Route to Product.php
+    '/about' => 'About.php',     // Route to About.php
 ];
 
-switch ($request_method) {
-    case 'GET':
-        // Handle GET requests
-        echo json_encode($sample_data);
-        break;
-    
-    case 'POST':
-        // Handle POST requests
-        $input_data = json_decode(file_get_contents('php://input'), true);
-        // Do something with input_data, e.g., store it in a database
-        $response = [
-            'status' => 'success',
-            'message' => 'Data received',
-            'data' => $input_data,
-        ];
-        echo json_encode($response);
-        break;
+// Get the request URI
+$request_uri = $_SERVER['REQUEST_URI'];
 
-    default:
-        // Handle unsupported request methods
-        header("HTTP/1.1 405 Method Not Allowed");
-        echo json_encode([
-            'status' => 'error',
-            'message' => 'Method Not Allowed'
-        ]);
-        break;
+// Check if the requested URI exists in the routes array
+if (array_key_exists($request_uri, $routes)) {
+    // Include the corresponding PHP file for that route
+    include($routes[$request_uri]);
+    // Don't close the connection here if it's being used in the included script
+} else {
+    // If the route does not exist, show a 404 page
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Route not found',
+    ]);
 }
+
+// Close the database connection after all logic is completed
+// $conn->close();
+?>
