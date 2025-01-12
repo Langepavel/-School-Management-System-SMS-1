@@ -1,0 +1,38 @@
+
+  /* Content styling */
+  .content {
+    margin-left: 270px;
+    padding: 20px;
+  }
+
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h5 {
+    color: #6f42c1;
+  }
+
+  .pie-chart {
+    height: 150px;
+    width: 150px;
+    background: conic-gradient(
+      orange 0% 40%,
+      purple 40% 80%,
+      green 80% 100%
+    );
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .table thead {
+    background-color: #6f42c1;
+    color: white;
+  }
+
+  .notifications {
+    max-height: 250px;
+    overflow-y: auto;
+  }
