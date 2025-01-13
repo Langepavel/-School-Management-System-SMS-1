@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 // Database connection details
 $servername = "localhost";  // MySQL username
 $username = "root";         // MySQL username
-$password = "";             // MySQL password (empty if none)
+$password = "Rolandor2020";             // MySQL password (empty if none)
 $dbname = "team1";          // Database name
 
 // Create database connection

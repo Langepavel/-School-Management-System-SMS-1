@@ -1,0 +1,13 @@
+.add_stud{
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+form{
+    width: 90%;
+    padding: 10px;
+}
+form input{
+    width: 100%;
+    padding: 8px;
+}
